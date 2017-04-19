@@ -291,7 +291,8 @@ COMPOSER_bak="$COMPOSER"
 export COMPOSER=composer.json
 
 status "Checking for additional extensions to install..."
-source $BP_DIR/bin/util/ioncube.sh
+echo "executing sh "+$build_dir+"/bin/util/"
+source $build_dir/bin/util/ioncube.sh
 # special treatment for Blackfire; we enable it if we detect a server id and a server token for it
 install_blackfire_ext
 # special treatment for New Relic; we enable it if we detect a license key for it
